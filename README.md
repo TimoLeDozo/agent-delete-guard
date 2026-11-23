@@ -4,6 +4,10 @@ A PreToolUse hook that stops coding agents from deleting or overwriting a reposi
 
 It reads the shell command the agent is about to run (bash, PowerShell, cmd, inline Python, node, perl, ruby, php), decides statically whether it destroys something inside the protected root, and refuses it before it runs. It never executes the command. If the guard itself crashes, it refuses: a broken guard lets nothing through.
 
+![The guard refusing three deletions and letting a move and a test run through](docs/demo.gif)
+
+<sub>Real verdicts and real exit codes from this file, replayed as an animation. The refusal message is in French because the guard was built for a French workstation.</sub>
+
 ## What it blocks
 
 Run from inside the protected root, unless noted.
